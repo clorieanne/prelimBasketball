@@ -1,37 +1,45 @@
 """The first team"""
 class Team1(object):
-	"""Initialization"""
-    def __init__(self, scoreRec):
-        self.scoreRec = []
+    """Initialization"""
+    def __init__(self):
+        self.scoreRec = 0
 
-    def addscore(score):
-        self.scoreRec =+ score
-        displayscore()
+    def addscore(self, score):
+        self.scoreRec = self.scoreRec + int(score)
 
-    def displayscore():
-        print 'Team1: ' + self.scoreRec
+    def display(self):
+        print 'Team1: ' + str(self.scoreRec)
 
 """The second team"""
 class Team2(object):
     """Initialization"""
-    def __init__(self, scoreRec):
-        self.scoreRec = []
+    def __init__(self):
+        self.scoreRec = 0
 
-    def addscore(score):
-        self.scoreRec =+ score
-        displayscore()
+    def addscore(self, score):
+        self.scoreRec = self.scoreRec + score
 
-    def displayscore():
-        print 'Team1: ' + self.scoreRec
+    def display(self):
+        print 'Team2: ' + str(self.scoreRec)
 
-if __name__: '__main__':
+if __name__=='__main__':
     team1 = Team1()
     team2 = Team2()
-    team = input('Which team to score? ( 1-team1, 2-team2 ):')
 
-    if chosen == 1:
-    	score = input('Input score of team1:')
-    	team1.addscore(score)
-    else:
-        score = input('Input score of team2:')
-        team2.addscore(score)
+    i = 1
+    while i == 1:
+        team = input('Which team to score? ( 1-team1, 2-team2 ):')
+
+        if team == 1:
+    	    score = input('Input score of team1:')
+    	    team1.addscore(score)
+        elif team == 2:
+            score = input('Input score of team2:')
+            team2.addscore(score)
+        else:
+        	print 'error: no such team'
+
+        team1.display()
+        team2.display()
+
+        i = input('GameOver? (0-yes 1-no): ')
