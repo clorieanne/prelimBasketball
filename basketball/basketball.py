@@ -1,5 +1,5 @@
-"""The first team"""
-class Team1(object):
+"""The Team"""
+class Team(object):
     """Initialization"""
     def __init__(self):
         self.scoreRec = 0
@@ -10,21 +10,9 @@ class Team1(object):
     def display(self):
         print 'Team1: ' + str(self.scoreRec)
 
-"""The second team"""
-class Team2(object):
-    """Initialization"""
-    def __init__(self):
-        self.scoreRec = 0
-
-    def addscore(self, score):
-        self.scoreRec = self.scoreRec + score
-
-    def display(self):
-        print 'Team2: ' + str(self.scoreRec)
-
 if __name__=='__main__':
-    team1 = Team1()
-    team2 = Team2()
+    team1 = Team()
+    team2 = Team()
 
     i = 1
     while i == 1:
