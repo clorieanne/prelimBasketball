@@ -1,4 +1,5 @@
 """The Team"""
+result = []
 class Team(object):
     """Initialization"""
     def __init__(self):
@@ -8,7 +9,7 @@ class Team(object):
         self.scoreRec = self.scoreRec + int(score)
 
     def display(self):
-        print 'Team1: ' + str(self.scoreRec)
+    	return self.scoreRec
 
 if __name__=='__main__':
     team1 = Team()
@@ -27,7 +28,12 @@ if __name__=='__main__':
         else:
         	print 'error: no such team'
 
-        team1.display()
-        team2.display()
+        a = 'Team1: ' + str(team1.display())
+        b =  'Team2: ' + str(team2.display())
+        print a
+        print b
+
+        result.append(a)
+        result.append(b)
 
         i = input('GameOver? (0-yes 1-no): ')
